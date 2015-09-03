@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="howToPlayApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/howtoplay.css" rel="stylesheet">
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.1.2/angular-strap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/2.1.2/angular-strap.tpl.min.js"></script>
+    
+    <script src="/javascripts/splendor/splendor.js"></script>
+    <script src="/javascripts/howtoplay.js"></script>
+    <script src="/javascripts/lib/ng-joyride.js"></script>
+    <link href="/stylesheets/lib/ng-joyride.css"rel="stylesheet">
+    <base href="/" />
+    <title></title>
+
+</head>
+<body ng-controller="MainCtrl">
+
+<div class = "container-fluid">
+    <div class="row">
+        <div class="col-xs-1 sidebar" >
+            <div class="fake-link" ng-click='loadGame("splendor")'> SPLENDOR </div>
+        </div>
+        <div class="col-xs-11 main">
+            <div id="inputline" >
+                ~~randomID%$
+                How do we play
+                <input type="text" placeholder="[game]" style="position: relative; vertical-align: top; ">
+            </div>
+            <div ng-if="selectedGame != ''" ng-include="selectedGameURL"></div>
+        </div>
+    </div>
+</div>
+<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+</body>
+</html>
